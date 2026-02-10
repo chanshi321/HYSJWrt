@@ -63,15 +63,15 @@ on:
           - xunlong_orangepi-r1-plus
           - xunlong_orangepi-r1-plus-lts
         required: true
-        default: 'friendlyarm_nanopi-r3s'
+        default: 'friendlyarm_nanopi-r5s'
       custom_router_ip:
         description: "请设置软路由的管理地址(注意仅对多网口软路由有效) 格式:192.168.x.1 或 10.x.x.1"
         required: true
-        default: "192.168.100.1"
+        default: "192.168.1.1"
       rootfs_partsize:
         description: '设置软件包大小 单位(MB)'
         required: true
-        default: '1024'
+        default: '2048'
       enable_store:
         description: "集成 store 商店"
         required: false
@@ -177,7 +177,7 @@ jobs:
 
           - ✳️ **软路由型号**: ${{ github.event.inputs.profile }}
           - 🏠 **后台地址**: ${{ github.event.inputs.custom_router_ip }}
-          - 👤 **用户名**: root
+          - 👤 **用户名**: chanshi
           - 🔑 **密码**: 无
           EOF
 
